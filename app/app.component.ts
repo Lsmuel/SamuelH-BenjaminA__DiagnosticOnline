@@ -16,16 +16,47 @@ interface Componente{
 export class AppComponent {
 
   componentes : Componente[] = [
-    {
+      {
       icon: 'accessibility-outline', 
       name: 'Cabeza',
-      redirecTo: '/manual-de-uso'
+      redirecTo: '/#'
+      },
+      {
+        icon: 'accessibility-outline',
+        name: 'Ojos',
+        redirecTo: '/#'
+      },
+      {
+        icon: 'accessibility-outline',
+        name: 'Orejas',
+        redirecTo: '/#'
+      },
+      {
+        icon: 'accessibility-outline',
+        name: 'Nariz',
+        redirecTo: '/#'
       },
       {
         icon: 'accessibility-outline',
         name: 'Pecho',
-        redirecTo: '/formulario'
+        redirecTo: '/#'
       },
+      {
+        icon: 'accessibility-outline',
+        name: 'Espalda',
+        redirecTo: '/#'
+      },
+      {
+        icon: 'accessibility-outline',
+        name: 'Brazos',
+        redirecTo: '/#'
+      },
+      {
+        icon: 'accessibility-outline',
+        name: 'Piernas',
+        redirecTo: '/#'
+      },
+
   ]
 
 
