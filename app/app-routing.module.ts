@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'formulario',
     loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
   },
+  {
+    path: 'medicina',
+    loadChildren: () => import('./pages/medicina/medicina.module').then( m => m.MedicinaPageModule)
+  },
 ];
 @NgModule({
   imports: [

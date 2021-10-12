@@ -25,6 +25,11 @@ export class InicioPage implements OnInit {
       name: 'Formumlario',
       redirecTo: '/formulario'
     },
+    {
+      icon: 'bug-outline',
+      name: 'Medicina',
+      redirecTo: '/medicina'
+    },
 
   ]
 
