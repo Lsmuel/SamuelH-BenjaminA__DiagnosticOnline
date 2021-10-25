@@ -27,7 +27,7 @@ export class InicioPage implements OnInit {
     },
     {
       icon: 'bug-outline',
-      name: 'Medicina',
+      name: 'Novedades',
       redirecTo: '/medicina'
     },
 
