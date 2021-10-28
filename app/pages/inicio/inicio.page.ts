@@ -15,21 +15,7 @@ interface Componente{
 export class InicioPage implements OnInit {
 
   componentes : Componente[] = [
-    {
-    icon: 'arrow-forward-outline',
-    name: 'Manual',
-    redirecTo: '/manual-de-uso'
-    },
-    {
-      icon: 'arrow-forward-outline',
-      name: 'Formumlario',
-      redirecTo: '/formulario'
-    },
-    {
-      icon: 'bug-outline',
-      name: 'Novedades',
-      redirecTo: '/medicina'
-    },
+   
 
   ]
 

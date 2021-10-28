@@ -3,12 +3,16 @@ import { Storage } from '@ionic/storage';
 
 export interface Datos {
   id: number;
+  rut: string;
   nombre: string;
   apellido: string;
+  direccion: string;
+  email: string;
   edad: number;
+  telefono: number;
   modified: number;
 }
-const ITEMS_KEY = 'my-datos'
+const ITEMS_KEY = 'my-datos';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +21,7 @@ export class DatosService {
 
   private _storage: Storage;
 
-  constructor(private storage: Storage) { 
+  constructor(private storage: Storage) {
     this.init();
   }
 
@@ -34,7 +38,7 @@ export class DatosService {
       } else {
         return this.storage.set(ITEMS_KEY, [dato]);
       }
-    })
+    });
   }
 
 
