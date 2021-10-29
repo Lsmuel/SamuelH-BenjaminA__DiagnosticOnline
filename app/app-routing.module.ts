@@ -26,10 +26,10 @@ const routes: Routes = [
   {
     path: 'datos',
     loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
-  },  {
-    path: 'cabeza',
-    loadChildren: () => import('./pages/cabeza/cabeza.module').then( m => m.CabezaPageModule)
   },
+
+
+  
 
 
 

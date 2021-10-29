@@ -1,5 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios">
+        </ion-back-button>
+
+    </ion-buttons>
     <ion-title>
       Datos 
     </ion-title>
@@ -73,7 +83,7 @@
             <p>{{dato.modified | date: 'short'}}</p>
           </ion-label>
         </ion-item>
-        <p>___________________________________________________________</p>
+        <p>_________________________________________</p>
         <ion-item-options side="end">
           <ion-item-option color="secondary" (click)="updateDatos(dato)">Actualizar</ion-item-option>
          <ion-item-option color="danger" (click)="deleteDatos(dato)">Eliminar</ion-item-option> 

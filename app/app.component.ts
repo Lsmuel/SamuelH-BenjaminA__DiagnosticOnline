@@ -31,6 +31,11 @@ export class AppComponent {
         icon: 'document-text-outline', 
         name: 'Formulario',
         redirecTo: 'datos'
+      },
+      {
+        icon: 'document-text-outline', 
+        name: 'Login ',
+        redirecTo: 'login'
       }
 
   ]
