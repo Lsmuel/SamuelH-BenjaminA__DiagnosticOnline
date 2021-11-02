@@ -2,24 +2,28 @@
   <ion-toolbar>
 
 
-    <ion-buttons slot="start">
-      <ion-back-button 
+    <ion-buttons slot="start" >
+      <ion-back-button routerLink="/inicio"
           defaultHref="/"
           text="Back"
           color="primary"
-          mode="ios">
+          mode="ios"
+         >
         </ion-back-button>
     </ion-buttons>
     
-    <ion-buttons slot="end">
-      <ion-avatar>
+    <ion-buttons slot="end" routerLink="/inicio">
+      <ion-avatar >
         <ion-img  src="/assets/img/symtosympn.png"></ion-img>
       </ion-avatar>
     </ion-buttons>
-    <ion-title  color="primary">Manual</ion-title>
+    <ion-title class="textCenter"  color="primary">Manual</ion-title>
+
+
+
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content color="primary">
 
 <ion-card>
   <ion-card-header>

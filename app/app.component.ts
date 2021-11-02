@@ -28,15 +28,12 @@ export class AppComponent {
         redirecTo: 'medicina'
       },
       {
-        icon: 'document-text-outline', 
-        name: 'Formulario',
-        redirecTo: 'datos'
+        icon: 'document-attach-outline', 
+        name: 'Formulario Medico',
+        redirecTo: 'formulario-medico'
       },
-      {
-        icon: 'document-text-outline', 
-        name: 'Login ',
-        redirecTo: 'login'
-      }
+
+
 
   ]
 

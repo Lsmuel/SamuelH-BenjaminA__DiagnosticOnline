@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
 
-interface Componente{
+interface Componente {
   icon: string;
   name: string;
-  redirecTo:string;
+  redirecTo: string;
 
 }
 @Component({
@@ -14,18 +15,21 @@ interface Componente{
 })
 export class InicioPage implements OnInit {
 
-  componentes : Componente[] = [
-   
+  componentes: Componente[] = [
+
 
   ]
 
-  
-
-  constructor(private menuController: MenuController) { }
+  constructor(private menuController: MenuController, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
-  mostrarMenu(){
+  mostrarMenu() {
     this.menuController.open('first');
+  }
+
+  logout() {
+    localStorage.setItem('authenticated', '0');
+    this.router.navigateByUrl('/');
   }
 }
