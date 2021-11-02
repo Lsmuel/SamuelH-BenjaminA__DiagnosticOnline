@@ -1,41 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-export interface Datos {
+export interface Form {
   id: number;
   rut: string;
   nombre: string;
   apellido: string;
   direccion: string;
+  fechaN: Date;
   email: string;
-  password: string;
-  edad: number;
   telefono: number;
+  mensaje: string;
   modified: number;
 }
-const ITEMS_KEY = 'my-datos-login';
+const ITEMS_KEY = 'my-datos';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DatosService {
+export class FormularioMedicoService {
 
   private _storage: Storage;
 
   constructor(private storage: Storage) {
     this.init();
-  }
+   }
 
-  async init() {
+   async init() {
     const storage = await this.storage.create();
     this._storage = storage;
   }
 
-  addDatos(dato: Datos): Promise<any> {
-    return this.storage.get(ITEMS_KEY).then((datos: Datos[]) => {
-      if (datos) {
-        datos.push(dato);
-        return this.storage.set(ITEMS_KEY, datos);
+  addDatos(dato: Form): Promise<any> {
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (form) {
+        form.push(dato);
+        return this.storage.set(ITEMS_KEY, form);
       } else {
         return this.storage.set(ITEMS_KEY, [dato]);
       }
@@ -43,17 +43,17 @@ export class DatosService {
   }
 
 
-  getDatos(): Promise<Datos[]> {
+  getDatos(): Promise<Form[]> {
     return this.storage.get(ITEMS_KEY);
   }
 
-  updateDatos(dato: Datos): Promise<any> {
-    return this.storage.get(ITEMS_KEY).then((datos: Datos[]) => {
-      if (!datos || datos.length == 0) {
+  updateDatos(dato: Form): Promise<any> {
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (!form || form.length == 0) {
         return null;
       }
-      let newDato: Datos[] = [];
-      for (let i of datos) {
+      let newDato: Form[] = [];
+      for (let i of form) {
         if (i.id === dato.id) {
           newDato.push(dato);
         }
@@ -66,13 +66,13 @@ export class DatosService {
   }
 
 
-  deleteDatos(id: number): Promise<Datos> {
-    return this.storage.get(ITEMS_KEY).then((datos: Datos[]) => {
-      if (!datos || datos.length === 0) {
+  deleteDatos(id: number): Promise<Form> {
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (!form || form.length === 0) {
         return null;
       }
-      let toKeep: Datos[] = [];
-      for (let i of datos) {
+      let toKeep: Form[] = [];
+      for (let i of form) {
         if (i.id !== id) {
           toKeep.push(i);
         }
@@ -80,5 +80,4 @@ export class DatosService {
       return this.storage.set(ITEMS_KEY, toKeep);
     });
   }
-
 }

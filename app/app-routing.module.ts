@@ -1,32 +1,47 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'inicio',
-    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule),
+    canLoad: [AuthGuard]
+    
   },
   {
     path: 'manual-de-uso',
-    loadChildren: () => import('./pages/manual-de-uso/manual-de-uso.module').then( m => m.ManualDeUsoPageModule)
-  },
-  {
-    path: 'formulario',
-    loadChildren: () => import('./pages/formulario/formulario.module').then( m => m.FormularioPageModule)
+    loadChildren: () => import('./pages/manual-de-uso/manual-de-uso.module').then( m => m.ManualDeUsoPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'medicina',
-    loadChildren: () => import('./pages/medicina/medicina.module').then( m => m.MedicinaPageModule)
+    loadChildren: () => import('./pages/medicina/medicina.module').then( m => m.MedicinaPageModule),
+    canLoad: [AuthGuard]
   },
   {
     path: 'datos',
-    loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule)
+    loadChildren: () => import('./pages/datos/datos.module').then( m => m.DatosPageModule),
+    
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'formulario-medico',
+    loadChildren: () => import('./pages/formulario-medico/formulario-medico.module').then( m => m.FormularioMedicoPageModule)
+  },
+
+
+
+
+
 
 
   
