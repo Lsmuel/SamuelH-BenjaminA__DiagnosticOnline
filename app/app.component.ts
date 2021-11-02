@@ -33,7 +33,10 @@ export class AppComponent {
         redirecTo: 'formulario-medico'
       },
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
 
   ]
 

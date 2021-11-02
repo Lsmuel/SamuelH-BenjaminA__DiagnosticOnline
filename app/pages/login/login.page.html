@@ -3,9 +3,15 @@
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
+<<<<<<< HEAD
 <ion-content>
 <ion-card-content class="color textCenter ">
   <form  #formulario="ngForm" class="form-signin">
+=======
+
+<ion-card-content class="color textCenter ">
+  <form  #formulario="ngForm" (ngSubmit)="onSubmit()" class="form-signin">
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
     <ion-card >
       <ion-label position="floating">Email</ion-label>
       <ion-input name="Email" [(ngModel)]="user.email" type="text" required></ion-input>
@@ -21,8 +27,15 @@
     </ion-button>
 
     
+<<<<<<< HEAD
     <ion-button  color="dark" expand="block" fill="outline" [routerLink]="['/datos']">Crear cuenta</ion-button>
   </form>
     
 </ion-card-content>
 </ion-content>
+=======
+    <ion-button color="dark" expand="block" fill="outline" [routerLink]="['/datos']">Crear cuenta</ion-button>
+  </form>
+    
+</ion-card-content>
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231

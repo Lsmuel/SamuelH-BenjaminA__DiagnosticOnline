@@ -35,6 +35,7 @@ const routes: Routes = [
   },
   {
     path: 'formulario-medico',
+<<<<<<< HEAD
     loadChildren: () => import('./pages/formulario-medico/formulario-medico.module').then( m => m.FormularioMedicoPageModule),
     canLoad: [AuthGuard]
   },
@@ -42,6 +43,9 @@ const routes: Routes = [
     path: 'cabeza',
     loadChildren: () => import('./pages/cabeza/cabeza.module').then( m => m.CabezaPageModule),
     canLoad: [AuthGuard]
+=======
+    loadChildren: () => import('./pages/formulario-medico/formulario-medico.module').then( m => m.FormularioMedicoPageModule)
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
   },
 
 
@@ -50,7 +54,10 @@ const routes: Routes = [
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
   
 
 

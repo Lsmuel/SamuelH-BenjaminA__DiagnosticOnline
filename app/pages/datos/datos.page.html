@@ -1,6 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
+<<<<<<< HEAD
       <ion-back-button defaultHref="/" text="Back" color="primary" mode="ios">
       </ion-back-button>
     </ion-buttons>
@@ -55,3 +56,73 @@
       </ion-button>
   </ion-card-content>
 </ion-content>
+=======
+      <ion-back-button 
+          defaultHref="/"
+          text="Back"
+          color="primary"
+          mode="ios">
+        </ion-back-button>
+
+
+    
+
+    </ion-buttons>
+    <ion-title class="textCenter">
+      Creando Usuario 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item>
+    <ion-label position="fixed">Rut</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.rut" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Apellido</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.apellido" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="fixed">Direccion</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.direccion" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="fixed">Email </ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.email" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Password </ion-label>
+    <ion-input type="password" [(ngModel)]="newDato.password" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Tel. (+56 9) </ion-label>
+    <ion-input type="number" [(ngModel)]="newDato.telefono " required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Edad </ion-label>
+    <ion-input type="number" [(ngModel)]="newDato.edad " required></ion-input>
+  </ion-item>
+
+
+
+  <ion-button (click)="addDatos()" expand="block" color="success">
+    Agregar datos
+  </ion-button>
+
+ 
+</ion-content>
+
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231

@@ -32,10 +32,17 @@ export class FormularioMedicoService {
   }
 
   addDatos(dato: Form): Promise<any> {
+<<<<<<< HEAD
     return this.storage.get(ITEMS_KEY).then((datos: Form[]) => {
       if (datos) {
         datos.push(dato);
         return this.storage.set(ITEMS_KEY, datos);
+=======
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (form) {
+        form.push(dato);
+        return this.storage.set(ITEMS_KEY, form);
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
       } else {
         return this.storage.set(ITEMS_KEY, [dato]);
       }
@@ -48,12 +55,21 @@ export class FormularioMedicoService {
   }
 
   updateDatos(dato: Form): Promise<any> {
+<<<<<<< HEAD
     return this.storage.get(ITEMS_KEY).then((datos: Form[]) => {
       if (!datos || datos.length == 0) {
         return null;
       }
       let newDato: Form[] = [];
       for (let i of datos) {
+=======
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (!form || form.length == 0) {
+        return null;
+      }
+      let newDato: Form[] = [];
+      for (let i of form) {
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
         if (i.id === dato.id) {
           newDato.push(dato);
         }
@@ -67,12 +83,21 @@ export class FormularioMedicoService {
 
 
   deleteDatos(id: number): Promise<Form> {
+<<<<<<< HEAD
     return this.storage.get(ITEMS_KEY).then((datos: Form[]) => {
       if (!datos || datos.length === 0) {
         return null;
       }
       let toKeep: Form[] = [];
       for (let i of datos) {
+=======
+    return this.storage.get(ITEMS_KEY).then((form: Form[]) => {
+      if (!form || form.length === 0) {
+        return null;
+      }
+      let toKeep: Form[] = [];
+      for (let i of form) {
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
         if (i.id !== id) {
           toKeep.push(i);
         }
@@ -80,5 +105,8 @@ export class FormularioMedicoService {
       return this.storage.set(ITEMS_KEY, toKeep);
     });
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
 }

@@ -27,10 +27,15 @@ export class FormularioMedicoPage implements OnInit {
   loadDatos(){
     this.storageService.getDatos().then(formu=>{
       this.form=formu;
+<<<<<<< HEAD
       
     });
   }
   
+=======
+    });
+  }
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
 
 
   addDatos(){
@@ -40,7 +45,10 @@ export class FormularioMedicoPage implements OnInit {
       this.newForm = <Form>{};
       this.showToast('!Datos Agregados');
       this.loadDatos();
+<<<<<<< HEAD
   
+=======
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
     });
   }
 
@@ -70,8 +78,11 @@ export class FormularioMedicoPage implements OnInit {
     toast.present();
   }
 
+<<<<<<< HEAD
   
   
 
+=======
+>>>>>>> 9511ec5ca3fe6df42d78d00f10fc0cab09854231
 }
 
